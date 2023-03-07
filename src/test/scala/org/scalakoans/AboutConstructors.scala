@@ -24,20 +24,20 @@ class AboutConstructors extends KoanSuite {
 
   koan("val in class definition defines read only property") {
     val aboutMe = new AboutConstructorWithValParameter("MyName")
-    aboutMe.name should be(__)
+    aboutMe.name should be("MyName")
   }
 
   koan("var in class definition defines read/write parameters") {
     val aboutMe = new AboutConstructorWithVarParameter("MyName")
     aboutMe.name = "YourName"
-    aboutMe.name should be(__)
+    aboutMe.name should be("YourName")
   }
 
   koan("private member data is not accessible") {
     val aboutMe = new AboutConstructorWithPrivateClassParameter("MyName")
 
     // what happens if you uncomment this line? why?
-    // aboutMe.name = "Me"
+    //aboutMe.name = "Me"
   }
 
   koan("Primary constructor specified with a parameter requires that parameter to be passed in") {

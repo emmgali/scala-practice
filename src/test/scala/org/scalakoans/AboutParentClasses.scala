@@ -17,8 +17,8 @@ class AboutParentClasses extends KoanSuite {
     val me = new Employee("Name", "Yourself", 1233)
     val worker: Worker = me
 
-    worker.firstName should be(__)
-    worker.lastName should be(__)
+    worker.firstName should be("Name")
+    worker.lastName should be("Yourself")
   }
 
   koan("An abstract class, as in Java, cannot be instantiated and only inherited") {
